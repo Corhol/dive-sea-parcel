@@ -12,24 +12,49 @@ p {
   width: 310px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 1024px) {
+    width: 888px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1248px;
+  }
 }
 
 .herro {
   & .card {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 27px;
+    padding-bottom: 27px;
     background-color: white;
     border-radius: 14px;
     box-shadow: 0px 3.48px 41.7px rgba(197, 197, 197, 0.25);
+    @media screen and (min-width: 1440px) {
+      display: flex;
+      border-radius: 17px;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 1440px) {
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
+
   & .thumb {
     width: 279.37px;
     height: 245.69px;
     border-radius: 13.23px;
     background-image: url("./images/sun.png");
     background-size: cover;
+    @media screen and (min-width: 1440px) {
+      width: 600px;
+      height: 600px;
+      flex-shrink: 0;
+      border-radius: 17px;
+    }
   }
   h2 {
     font-family: "Poppins";
@@ -37,13 +62,29 @@ p {
     font-weight: 600;
     font-size: 15.64px;
     line-height: 22px;
+    @media screen and (min-width: 1440px) {
+      font-size: 37px;
+      margin-top: 0px;
+    }
   }
-  p {
+  & .text {
+    @media screen and (min-width: 1440px) {
+      width: 474px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  & .description {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 13.64px;
     color: rgba(0, 0, 0, 0.437);
+    margin-top: 5px;
+    @media screen and (min-width: 1440px) {
+      font-size: 20px;
+    }
   }
   & .users {
     display: flex;
@@ -52,20 +93,26 @@ p {
     & .avatar {
       display: flex;
       align-items: center;
-      & .logo {
-        width: 33px;
-        height: 33px;
-        border-radius: 50%;
-        background-size: cover;
-      }
-      & .logo1 {
-        background-image: url("./images/img1.png");
-      }
-      & .logo2 {
-        background-image: url("./images/img2.png");
+      gap: 10px;
+    }
+    & .logo {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      background-size: cover;
+      @media screen and (min-width: 1440px) {
+        width: 66px;
+        height: 66px;
       }
     }
+    & .logo1 {
+      background-image: url("./images/img1.png");
+    }
+    & .logo2 {
+      background-image: url("./images/img2.png");
+    }
   }
+
   & button {
     margin-top: 30px;
     background-color: black;
@@ -77,7 +124,10 @@ p {
     line-height: 16px;
     display: block;
     border-radius: 12px;
-    width: 100%;
-    height: 45px;
+
+    @media screen and (min-width: 1440px) {
+      width: 100%;
+      height: 100px;
+    }
   }
 }
